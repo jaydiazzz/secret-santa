@@ -1,0 +1,69 @@
+$opaqueDarkBlue : rgba(58, 84, 119, .13);
+$red            : #e23434;
+$blueGrey       : #50606E;
+$darkGrey       : #2b2b2b;
+$secondaryGrey  : #323232;
+$grey           : #A2ACBC;
+$alternateGrey  : #A8B4BE;
+$lightGrey      : #DDE7F1;
+
+$error : #cc0000;
+
+$defaultBoxShadow: 0px 1px 2px rgba(0, 0, 0, 0.12),
+0px 1px 5px 2px rgba(0, 0, 0, 0.25);
+$secondaryBoxShadow: 0px 1px 4px rgba(0, 0, 0, 0.08),
+0px 1px 2px rgba(0, 0, 0, 0.12);
+$inputBoxShadow: 0px 1px 7px rgba(80, 96, 110, 0.31);
+// Small devices (landscape phones, 576px and up)
+$mobile: 575px;
+// Medium devices (tablets, 768px l up)
+$tablet: 767px;
+// Large devices (desktops, 992px and up)
+$desktop: 991px;
+// Extra large devices (large desktops, 1700px and up)
+$largeDesktop: 1700px;
+
+$gradientOne: linear-gradient(180deg, #F3F6FA 0%, rgba(243, 246, 250, 0) 100%);
+
+$gradualDarkGreyToTop : linear-gradient(
+	to top,
+	hsl(0, 0%, 100%) 0%,
+	hsla(0, 0%, 100%, 0.738) 19%,
+	hsla(0, 0%, 100%, 0.541) 34%,
+	hsla(0, 0%, 100%, 0.382) 47%,
+	hsla(0, 0%, 100%, 0.278) 56.5%,
+	hsla(0, 0%, 100%, 0.194) 65%,
+	hsla(0, 0%, 100%, 0.126) 73%,
+	hsla(0, 0%, 100%, 0.075) 80.2%,
+	hsla(0, 0%, 100%, 0.042) 86.1%,
+	hsla(0, 0%, 100%, 0.021) 91%,
+	hsla(0, 0%, 100%, 0.008) 95.2%,
+	hsla(0, 0%, 100%, 0.002) 98.2%,
+	hsla(0, 0%, 100%, 0) 100%
+);
+
+$color-primary: #1a1a1a;
+
+$highlight-color__form: $color-primary;
+
+$color-secondary : #50606E;
+$input-color: #50606E;
+$input-color-faded: #50606e80;
+$input-color-more-faded: #50606e66;
+$input-bg: #E3EAF0;
+$map-bg: #CAD2D3;
+
+$text-primary : #50606E;
+
+$box-shadow-primary : 0px 1px 2px rgba(0, 0, 0, 0.12),
+0px 1px 5px 2px rgba(0, 0, 0, 0.25);
+$box-shadow__card: 0px 2px 14px rgba(0, 0, 0, 0.15), 0px 0px 6px rgba(0, 0, 0, 0.1);
+$box-shadow__search-bar: 0px 2px 5px rgba(0, 0, 0, 0.15), 0px 0px 3px rgba(0, 0, 0, 0.1);
+
+$sheet__size--width: 400px;
+
+/* Rectangle 2.3 */
+
+$gradient__separate-down  : linear-gradient(180deg, #F3F6FA 0%, rgba(243, 246, 250, 0) 100%);
+$gradient__separate-up    : linear-gradient(0deg, #F3F6FA 0%, rgba(243, 246, 250, 0) 100%);
+$gradient__separate-right : linear-gradient(90deg, #F3F6FA 0%, rgba(243, 246, 250, 0) 100%);
