@@ -161,7 +161,7 @@ export default {
     .ghost {
       width: 300px;
       height: 300px;
-      background-image: url( './santa.gif' );
+      background-image: url( './assets/santa.gif' );
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: center;
@@ -219,7 +219,7 @@ export default {
       .tree {
         width: 20vw;
         height: 20vw;
-        background-image: url( './tree.svg' );
+        background-image: url( './assets/tree.svg' );
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center bottom;
