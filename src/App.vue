@@ -31,7 +31,8 @@
           @click='findPerson'
         ) Click Here
         h2.error(v-if='err') {{ err }}
-        h2(v-else-if='receiver') You are {{ receiver }}'s Secret Santa!
+        h2.loading(v-if='buttonState === "loading"') Loading...
+        h2(v-if='receiver') You are {{ receiver }}'s Secret Santa!
 
   .trees
 
