@@ -243,6 +243,31 @@ textarea {
   text-align: center;
   white-space: nowrap;
 
+	&.disabled {
+		background: #a3b7ae;
+		pointer-events: none;
+	}
+
+	&.loading {
+		background: #0b533b;
+		pointer-events: none;
+		transition: background-color .3s ease-in;
+		animation: pulse infinite;
+		animation-duration: 1.5s;
+
+		@-webkit-keyframes pulse {
+			0% {
+				background: #0b533b;
+			}
+			50% {
+				background: #a3b7ae;
+			}
+			100% {
+				background: #0b533b;
+			}
+		}
+	}
+
   &.submitted {
     animation: 1s noColor 1 forwards;
     .check-mark {

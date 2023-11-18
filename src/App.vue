@@ -26,9 +26,12 @@
 
       .swiper-slide.slide-2
         h2 Click button below to figure out who your spooky basket will be given to
-        .button(@click='findPerson') Click Here
+        .button(
+          :class='[buttonState]'
+          @click='findPerson'
+        ) Click Here
         h2.error(v-if='err') {{ err }}
-        h2(v-else) You are {{ receiver }}'s Secret Santa!
+        h2(v-else-if='receiver') You are {{ receiver }}'s Secret Santa!
 
   .trees
 
@@ -62,7 +65,19 @@ export default {
 
     activeSlide : 0,
 
+    buttonState : 'active',
+
   } ),
+
+  created() {
+
+    const state = localStorage.getItem( 'buttonState' );
+
+    if ( state ) {
+      this.buttonState = state;
+    }
+
+  },
 
   methods : {
 
@@ -84,8 +99,12 @@ export default {
 
     findPerson() {
 
+      this.buttonState = 'loading';
+
       write( this.user, ( person ) => {
         console.log( 'person', person );
+        this.buttonState = 'disabled';
+        localStorage.setItem( 'buttonState', 'disabled' );
         this.receiver = person;
       }, ( err ) => {
         this.err = err;
