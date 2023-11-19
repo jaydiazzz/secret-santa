@@ -59,7 +59,7 @@ export default {
     swiper : null, // null be default until the component is loaded in by the parent.
 
     swiperConfig : {
-      autoHeight     : true,
+      autoHeight     : false,
       spaceBetween   : 100,
       allowTouchMove : false,
     },
@@ -86,7 +86,7 @@ export default {
 
       this.activeSlide -= 1;
 
-      this.localSlides.slideBack();
+      this.swiper.slidePrev();
 
     },
 
@@ -94,7 +94,7 @@ export default {
 
       this.activeSlide += 1;
 
-      this.localSlides.slideNext();
+      this.swiper.slideNext();
 
     },
 
@@ -108,6 +108,7 @@ export default {
         localStorage.setItem( 'buttonState', 'disabled' );
         this.receiver = person;
       }, ( err ) => {
+        this.buttonState = 'disabled';
         this.err = err;
       } );
 
@@ -115,7 +116,7 @@ export default {
 
     slidesInit( slidesObj ) {
 
-      this.localSlides = slidesObj;
+      this.swiper = slidesObj;
 
       if ( this.resizeObserver ) {
 
@@ -125,7 +126,7 @@ export default {
 
       this.resizeObserver = new ResizeObserver( () => {
 
-        this.localSlides.update();
+        this.swiper.update();
 
       } );
 
@@ -143,7 +144,7 @@ export default {
 
         }
 
-        this.localSlides.update();
+        this.swiper.update();
 
       } );
 
@@ -265,6 +266,11 @@ export default {
 
       .swiper {
         width: 100vw;
+        height: 100vh;
+
+        .swiper-wrapper {
+          height: 100%;
+        }
       }
 
       .swiper-slide {

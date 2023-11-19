@@ -73,7 +73,7 @@ export const write = async ( user, cb, errCb ) => {
 
 								console.log( formattedRelations, key );
 
-								if ( formattedRelations[key].receiving.toLowerCase() === user.toLowerCase() ) {
+								if ( formattedRelations[key].secretSanta.toLowerCase() === user.toLowerCase() ) {
 									console.log( formattedRelations[key] );
 									return formattedRelations[key];
 								}
@@ -89,11 +89,9 @@ export const write = async ( user, cb, errCb ) => {
 
 							console.log( 'existing relation', relationData );
 
-							const relationRef = ref( 'relations' );
-
-							relationRef.push( {
-								receiving : user,
-								to        : foundUser,
+							push( ref( db, 'relations' ), {
+								secretSanta : user,
+								to          : foundUser,
 							} )
 								.then( () => {
 
@@ -105,10 +103,11 @@ export const write = async ( user, cb, errCb ) => {
 									console.log( data );
 
 									// update the list in firebase.database()
-									set( ref( db, 'usersAvailable', data ) );
-								} );
+									set( ref( db, 'usersAvailable' ), data );
 
-							cb( foundUser );
+									cb( foundUser )
+
+								} );
 
 						}
 
@@ -142,13 +141,12 @@ export const write = async ( user, cb, errCb ) => {
 									// update the list in firebase.database()
 									set( ref( db, 'usersAvailable' ), formattedData );
 
+									cb( foundUser )
+
 								} );
 
 						}
 
-					} )
-					.then( () => {
-						cb( foundUser )
 					} );
 
 			}
