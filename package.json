@@ -4,18 +4,21 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "npm -v"
   },
   "dependencies": {
     "firebase": "^10.6.0",
-    "swiper": "^11.0.4",
+    "swiper": "^g11.0.4",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
+    "gh-pages": "^6.2.0",
     "lodash.clonedeep": "^4.5.0",
     "lodash.get": "^4.4.2",
     "lodash.isequal": "^4.5.0",
