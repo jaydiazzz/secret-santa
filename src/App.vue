@@ -25,7 +25,7 @@
         .button(@click='slideNext') Next
 
       .swiper-slide.slide-2
-        h2 Click button below to figure out who your spooky basket will be given to
+        h2 Click button below to figure out whos Secret Santa you are
         .button(
           :class='[buttonState]'
           @click='findPerson'
