@@ -6,8 +6,7 @@
     "dev": "vite",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
-    "preview": "vite preview",
-    "test": "npm -v"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^10.6.0",
